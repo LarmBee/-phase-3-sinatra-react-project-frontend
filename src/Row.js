@@ -29,7 +29,7 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 	};
 
 	function handleAddComment(comment) {
-		// debugger;
+		
 		setComments([...comments, comment]);
 	}
 	const baseImageUrl = "https://image.tmdb.org/t/p/original/";
@@ -66,7 +66,7 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 		setDisplayMovieDetails(!displayMovieDetails);
 	}
 
-	// console.log(getMovie)
+	
 	return (
 		<div>
 			<div className="row">

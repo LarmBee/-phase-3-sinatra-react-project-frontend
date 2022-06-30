@@ -21,12 +21,7 @@ function Reviews({ movieId, category }) {
             .then(data => setComment(data))
         setShowComments(!showComments)
     }, [])
-    // function handleReviews() {
-    //     fetch(`http://localhost:9292${category}`)
-    //         .then(resp => resp.json())
-    //         .then(data => setComment(data))
-    //     setShowComments(!showComments)
-    // }
+   
     console.log(comment)
     let commentFilter
     if (getName === "netflix_original_id") { commentFilter = comment.filter(x => x.netflix_original_id === movieId) }
@@ -37,7 +32,7 @@ function Reviews({ movieId, category }) {
     else if (getName === "horror_id") { commentFilter = comment.filter(x => x.horror_id === movieId) }
     else if (getName === "documentary_id") { commentFilter = comment.filter(x => x.documentary_id === movieId) }
     else if (getName === "comedy_id") { commentFilter = comment.filter(x => x.comedy_id === movieId) }
-    // debugger
+    
 
     function handleUpdate(updatedComment) {
         const updated = comment.filter(x => x.id === updatedComment.id ? updatedComment : x)
@@ -46,7 +41,7 @@ function Reviews({ movieId, category }) {
 
     return (
         <div className="shadow" style={{ backgroundColor: "white" }}>
-            {/* <button onClick={handleReviews}>see more</button> */}
+            
             <h2 className="centerText">Comments</h2>
             <hr style={{ height: "5px", color: "black", backgroundColor: "black", width: "50%", marginLeft: "25%", marginRight: "25% !important" }}></hr>
             <br />

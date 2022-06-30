@@ -7,7 +7,7 @@ function Comments({ categoryComment, mov_id, handleAddComment }) {
     console.log(newComment)
     console.log(categoryComment);
     function handleSubmit(e) {
-        // debugger;
+        
         e.preventDefault();
         fetch(`http://localhost:9292/${categoryComment}`, {
             method: "post",

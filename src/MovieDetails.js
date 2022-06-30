@@ -9,10 +9,10 @@ function MovieDetails({ category }) {
     const getPathId = parseInt(getPath.split("/").pop())
 
 
-    // debugger
+
     console.log(getPath)
     const [getMovie, setGetMovie] = useState([])
-    // console.log(window.location.pathname)
+    
     useEffect(() => {
         fetch(`http://localhost:9292${getPath}`)
             .then(resp => resp.json())
@@ -20,9 +20,6 @@ function MovieDetails({ category }) {
     }, [])
 
 
-    // const { id } = useParams()
-    // console.log(id);
-    // console.log(props.location)
     const baseImageUrl = "https://image.tmdb.org/t/p/original/"
     return (
         <div style={{ backgroundColor: "black" }}>
