@@ -1,13 +1,13 @@
 
 const requests = {
-    fetchTrending: `http://localhost:9292/trending`,
-    fetchNetflixOriginals: `http://localhost:9292/netflix_originals`,
-    fetchTopRated: `http://localhost:9292/top_rated`,
-    fetchActionMovies: `http://localhost:9292/action`,
-    fetchComedyMovies: `http://localhost:9292/comedy`,
-    fetchHorrorMovies: `http://localhost:9292/horror`,
-    fetchRomanceMovies: `http://localhost:9292/romance`,
-    fetchDocumentaries: `http://localhost:9292/documentaries`,
+    fetchTrending: `https://netflixsinatraapi.herokuapp.com/trending`,
+    fetchNetflixOriginals: `https://netflixsinatraapi.herokuapp.com/netflix_originals`,
+    fetchTopRated: `https://netflixsinatraapi.herokuapp.com/top_rated`,
+    fetchActionMovies: `https://netflixsinatraapi.herokuapp.com/action`,
+    fetchComedyMovies: `https://netflixsinatraapi.herokuapp.com/comedy`,
+    fetchHorrorMovies: `https://netflixsinatraapi.herokuapp.com/horror`,
+    fetchRomanceMovies: `https://netflixsinatraapi.herokuapp.com/romance`,
+    fetchDocumentaries: `https://netflixsinatraapi.herokuapp.com/documentaries`,
 }
 
 const categoryComments = {

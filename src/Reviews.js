@@ -13,10 +13,10 @@ function Reviews({ movieId, category }) {
     console.log(movieId)
 
     const getName = category.split("/").pop().slice(0, -9) + "_id"
-    // debugger;
+    
     console.log(getName)
     useEffect(() => {
-        fetch(`http://localhost:9292${category}`)
+        fetch(`https://netflixsinatraapi.herokuapp.com${category}`)
             .then(resp => resp.json())
             .then(data => setComment(data))
         setShowComments(!showComments)
@@ -48,7 +48,7 @@ function Reviews({ movieId, category }) {
 
             {commentFilter.length == 0 ? <h4 className="centerText">No comments on this yet!! </h4> : commentFilter.map((x) => {
                 return <div className="shadow">
-                    <p className="centerText" key={x.id}><h5>Anonymous-</h5> <i>{x.comment}</i></p>
+                    <p className="centerText" key={x.id}><h5>Brandon Kanute-</h5> <i>{x.comment}</i></p>
                     <h5 className="centerText">{moment(x.created_at).format('MMMM Do YYYY')}{" "}</h5>
                     <ReviewLikes comment={x} onUpdate={handleUpdate} category={category} />
                 </div>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function Comments({ categoryComment, mov_id, handleAddComment }) {
 
@@ -9,7 +11,7 @@ function Comments({ categoryComment, mov_id, handleAddComment }) {
     function handleSubmit(e) {
         
         e.preventDefault();
-        fetch(`http://localhost:9292/${categoryComment}`, {
+        fetch(`https://netflixsinatraapi.herokuapp.com/${categoryComment}`, {
             method: "post",
             headers: {
                 "Content-type": "application/json"
@@ -31,7 +33,7 @@ function Comments({ categoryComment, mov_id, handleAddComment }) {
         <div>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="comment" onChange={(e) => setNewComment(e.target.value)}></input>
-                <button type="submit">Submit</button>
+                <button type="submit" className='btn btn-primary'>Submit</button>
             </form>
         </div>
     )

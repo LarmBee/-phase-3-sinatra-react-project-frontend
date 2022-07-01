@@ -29,7 +29,6 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 	};
 
 	function handleAddComment(comment) {
-		
 		setComments([...comments, comment]);
 	}
 	const baseImageUrl = "https://image.tmdb.org/t/p/original/";
@@ -57,7 +56,7 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 	}
 
 	function viewComments() {
-		fetch(`http://localhost:9292/${categoryComment}`)
+		fetch(`https://netflixsinatraapi.herokuapp.com/${categoryComment}`)
 			.then((resp) => resp.json())
 			.then((data) => {
 				setComments(data);
@@ -66,7 +65,6 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 		setDisplayMovieDetails(!displayMovieDetails);
 	}
 
-	
 	return (
 		<div>
 			<div className="row">
@@ -106,7 +104,7 @@ function Row({ title, fetchUrl, isLargeRow, categoryLink, categoryComment }) {
 											comments={comments}
 											handleAddComment={handleAddComment}
 											categoryComment={categoryComment}
-											style={{ marginTop: "10rem" }}
+											style={{ marginTop: "29rem" }}
 											mov_id={movieId}
 										/>
 									)}

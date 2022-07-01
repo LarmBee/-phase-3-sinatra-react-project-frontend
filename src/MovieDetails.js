@@ -14,7 +14,7 @@ function MovieDetails({ category }) {
     const [getMovie, setGetMovie] = useState([])
     
     useEffect(() => {
-        fetch(`http://localhost:9292${getPath}`)
+        fetch(`https://netflixsinatraapi.herokuapp.com${getPath}`)
             .then(resp => resp.json())
             .then(data => setGetMovie(data))
     }, [])
@@ -23,7 +23,7 @@ function MovieDetails({ category }) {
     const baseImageUrl = "https://image.tmdb.org/t/p/original/"
     return (
         <div style={{ backgroundColor: "black" }}>
-            <div className="shadow" style={{ marginTop: "3rem", backgroundColor: "white", position: "relative" }}>
+            <div className="shadow" style={{ marginTop: "3rem", backgroundColor: "black", color:"white",position: "relative" }}>
                 <h1 className="centerText">{getMovie?.name || getMovie?.title || getMovie?.original_name}</h1>
                 <img className="center" src={`${baseImageUrl}${getMovie.poster_path}`} alt="poster" ></img>
 
